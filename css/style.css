@@ -10,14 +10,14 @@
     --very-dark-blue: #232851;
     --light-grey: rgb(249, 249, 249);
     --grey: #B3B2B7;
-    --dark-gray:#8C8C94;
+    --dark-gray: #8C8C94;
     --xx-small: 0.6rem;
     --x-small: 0.8rem;
     --small: 0.9rem;
     --medium: 1rem;
     --large: 2.25rem;
-    --x-large: 2.45rem; 
-    --xx-large:2.8rem;
+    --x-large: 2.45rem;
+    --xx-large: 2.8rem;
 
 
 }
@@ -31,10 +31,12 @@
 body {
     font-family: 'Be Vietnam Pro';
 }
-p{
+
+p {
     font-size: var(--medium);
 }
-img{
+
+img {
     display: block;
 }
 
@@ -42,16 +44,18 @@ img{
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 40px 56px;
+    padding: 40px 56px;
 }
 
 .logo {
-   padding: 0px;
+    padding: 0px;
 }
 
-.nav-bar {
 
+.main-menu, header button{
+    display: none;
 }
+
 
 .hamburger-menu {
     width: 2.5rem;
@@ -60,6 +64,8 @@ img{
 .container {}
 
 .banner-container {
+    display: flex;
+    flex-direction: column;
     margin: 28px 0px;
     padding: 0px 8.5vw;
 }
@@ -88,7 +94,7 @@ img{
     ;
 
     & p {
-        
+
         font-weight: 500;
         line-height: 1.6rem;
         margin: 24px 0px;
@@ -127,13 +133,13 @@ img{
         font-size: var(--large);
         font-weight: 700;
         line-height: 115%;
-        
+
     }
 
     ;
 
     & p {
-        
+
         font-weight: 500;
         line-height: 150%;
     }
@@ -172,16 +178,22 @@ img{
     gap: 8px;
     height: 45px;
     margin-bottom: 20px;
-       & :nth-child(1) {
-            background-color: var(--violet);
-            border-radius: 50px;
-            color: var(--white);
-            padding: 13.449px 25px;
-        };
-        & :nth-child(2) {
-            padding: 0 8px;
-            color: var(--very-dark-blue)
-        };
+
+    & :nth-child(1) {
+        background-color: var(--violet);
+        border-radius: 50px;
+        color: var(--white);
+        padding: 13.449px 25px;
+    }
+
+    ;
+
+    & :nth-child(2) {
+        padding: 0 8px;
+        color: var(--very-dark-blue)
+    }
+
+    ;
 }
 
 .feature-content {
@@ -214,6 +226,7 @@ img{
     align-items: center;
     display: flex;
     flex-direction: column;
+
     & img {
         width: 16.2vw;
     }
@@ -228,12 +241,15 @@ img{
     text-align: center;
     top: -8vw;
     z-index: -1;
+
     & h3 {
         color: var(--very-dark-blue);
         font-size: 1.1rem;
         font-weight: 500;
         margin: 16px 0px;
-    };
+    }
+
+    ;
 
     & p {
         color: var(--grey);
@@ -249,8 +265,8 @@ img{
 .secondary {
     background-color: var(--very-dark-blue);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    font-size:var(--x-small);
-    
+    font-size: var(--x-small);
+
 }
 
 .footer {
@@ -262,25 +278,29 @@ img{
     justify-content: space-between;
     gap: 24px;
     padding: 40px 0px;
-    
+
 }
 
 .search-bar {
     padding: 10px 50px;
+
     & form {
         display: flex;
-        gap:9px;
+        gap: 9px;
+
         & input {
             border: none;
             border-radius: 50px;
             font-size: var(--x-small);
             padding: 13px;
             width: 60vw;
-            &::placeholder{
+
+            &::placeholder {
                 color: var(--grey);
             }
         }
-        & button{
+
+        & button {
             padding: 13px 20px;
         }
     }
@@ -290,16 +310,19 @@ img{
     display: flex;
     justify-content: space-around;
     width: 90vw;
-    & ul{
+
+    & ul {
         list-style: none;
-        & li{
+
+        & li {
             margin-bottom: 16px;
-            & a{
+
+            & a {
                 color: var(--white);
                 font-size: var(--medium);
                 font-weight: 400;
                 text-decoration: none;
-                 
+
             }
         }
     }
@@ -314,15 +337,52 @@ img{
 .social-icon {}
 
 .footer-logo {
-    & img{
-        
-    }
+    & img {}
 }
 
 .footer-copyright {
-    
+
     color: var(--dark-gray);
-    & p{
+
+    & p {
         font-size: var(--x-small);
+    }
+}
+
+@media (min-width:1440px) {
+    .header{
+        padding: 65px 165px;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    .header button{
+        display: block;
+    }
+    .main-menu {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        & ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+
+            & li a {
+                text-decoration: none;
+                color: var(--black)
+            }
+        }
+
+        ;
+
+    }
+
+    .banner-container {
+
+        flex-direction: row;
+        margin: 28px 0px;
+        padding: 0px 8.5vw;
     }
 }
