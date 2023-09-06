@@ -123,25 +123,29 @@ img {
     background-color: var(--shinning-sky-blue);
     color: var(--white);
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     gap: 50px;
     align-items: center;
     padding: 40px 20px;
+    width: 100vw;
 
     & h2 {
         align-self: stretch;
+        display: block;
         font-size: var(--large);
         font-weight: 700;
         line-height: 115%;
-
+        word-wrap: break-word;
+        
     }
-
+    
     ;
-
+    
     & p {
-
+        
         font-weight: 500;
         line-height: 150%;
+        word-wrap: break-word;
     }
 
     ;
@@ -154,20 +158,29 @@ img {
     ;
 
     &.emph-2 {
-        text-align: center;
-
+        
+        
+        & h2{
+            width: 55%;
+            word-wrap: break-word;
+            text-align: center;
+            align-self: center;
+        }
     }
 
     ;
 }
 
 .features {
-    margin: 50px 0px;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .feature {
-    margin-bottom: 20px;
-    margin-left: 34px;
+    padding-bottom: 20px;
+    padding-left: 34px;
+    width: 100vw;
 }
 
 .feature-title {
@@ -203,12 +216,11 @@ img {
 }
 
 .highlight-section {
-    margin-bottom: 48px;
+    padding: 48px 0px;
 }
 
 .section-title {
     color: var(--very-dark-blue);
-    margin-bottom: 48px;
     text-align: center;
 
     & h2 {
@@ -220,6 +232,7 @@ img {
 .highlight-section-container {
     display: flex;
     flex-direction: column;
+    padding: 40px 3vw 0px;
 }
 
 .highlight-card {
@@ -228,18 +241,18 @@ img {
     flex-direction: column;
 
     & img {
-        width: 16.2vw;
+        width: 7em;
     }
 }
 
 .highlight-card-content {
 
     background-color: var(--light-grey);
-    padding: 8vw 28px 20px;
+    padding: 3.5em 28px 20px;
     position: relative;
     margin: 0px 20px;
     text-align: center;
-    top: -8vw;
+    top: -3.5em;
     z-index: -1;
 
     & h3 {
@@ -278,6 +291,7 @@ img {
     justify-content: space-between;
     gap: 24px;
     padding: 40px 0px;
+    width: 100vw;
 
 }
 
@@ -384,5 +398,89 @@ img {
         flex-direction: row;
         margin: 28px 0px;
         padding: 0px 8.5vw;
+        gap: 10%;
+        & .banner-content{
+            flex: 35%
+        };
+        & .banner-image{
+            flex: 60%;
+        }
     }
+    .emphasize-section{
+        padding: 40px 6vw;
+        flex-flow: row wrap;
+        background-color: var(--violet);
+        justify-content: center;
+         & h2{
+            width:40%;
+        };
+        & p{
+            width: 40%;
+        }; 
+        
+        &.emph-2{
+            justify-content: space-around;
+            & h2{
+                text-align: left;
+                width: 30%;
+            }
+        }
+    }
+    
+    .features{
+        background-color: var(--light-grey);
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 1vw;
+        & .feature{
+            width: 40vw;
+            & .feature-title{
+                background-color: inherit;
+            }
+        };
+        
+        
+    }
+    .highlight-section-container{
+        flex-direction: row;
+        padding: 40px 3vw 0px;
+    }
+    .secondary {
+        background-color: var(--white);
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+        color: var(--violet);
+        font-size: var(--x-small);
+        border-radius: 50px;
+    }
+    .footer {
+        align-items: flex-start;
+        flex-flow: row wrap;
+        height: 250px;
+        padding: 40px 8vw 40px;
+        &>section{
+            width: 20vw;
+        };
+        & .search-bar{
+            order: 3;
+            width: 30vw;
+            align-self: flex-start;
+        };
+        & .footer-links{
+            order: 2;
+        };
+        & .social-media{
+            align-self: flex-start;
+            order: 4;
+            width: 15vw;
+        };
+        & .footer-logo{
+            order: 1;
+        };
+        & .footer-copyright{
+            order: 5;
+            align-self: flex-end;
+            
+        };
+    }
+
 }
