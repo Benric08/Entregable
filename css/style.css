@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 :root {
     --white: #FFFFFF;
     --black: #000000;
@@ -72,9 +72,13 @@ img {
 
 .banner-image {
     text-align: center;
-
+    
     & img {
         width: 100%;
+        &:hover{
+            transform: rotateY(180deg);
+            transition: 2s;
+        }    
     }
 }
 
@@ -85,10 +89,11 @@ img {
     & h1 {
         color: var(--very-dark-blue);
         font-size: var(--xx-large);
-        font-stretch: ultra-condensed;
         font-weight: 700;
         letter-spacing: -1px;
         line-height: 3.3rem;
+        
+    
     }
 
     ;
@@ -113,10 +118,19 @@ img {
     font-size: var(--x-small);
     letter-spacing: 0.05rem;
     padding: 13px 38px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .primary {
     background-color: var(--violet);
+    &:hover{
+        background-color:var(--shinning-sky-blue) ;
+        box-shadow: 0px 5px 20px #6adff966;
+        color: #fff;
+        transform: translateY(-2px);
+    }
 }
 
 .emphasize-section {
@@ -161,10 +175,8 @@ img {
         
         
         & h2{
-            width: 55%;
-            word-wrap: break-word;
             text-align: center;
-            align-self: center;
+            white-space: pre-line;
         }
     }
 
@@ -279,6 +291,12 @@ img {
     background-color: var(--very-dark-blue);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
     font-size: var(--x-small);
+    &:hover{
+        color: var(--shinning-sky-blue);
+        background-color: var(--white);
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+        
+    }
 
 }
 
@@ -308,9 +326,12 @@ img {
             font-size: var(--x-small);
             padding: 13px;
             width: 60vw;
-
+            outline: 2px solid var(--shinning-sky-blue);
             &::placeholder {
                 color: var(--grey);
+            };
+            &:focus{
+                outline-color: var(--violet);
             }
         }
 
@@ -383,9 +404,14 @@ img {
             gap: 20px;
             list-style: none;
 
-            & li a {
+            & li>a {
                 text-decoration: none;
-                color: var(--black)
+                color: var(--black);
+                &:hover{
+                    text-decoration: underline;
+                    transform: scale(1.4);
+                    
+                }
             }
         }
 
@@ -400,7 +426,9 @@ img {
         padding: 0px 8.5vw;
         gap: 10%;
         & .banner-content{
-            flex: 35%
+            flex: 35%;
+           
+              
         };
         & .banner-image{
             flex: 60%;
@@ -423,6 +451,7 @@ img {
             & h2{
                 text-align: left;
                 width: 30%;
+                white-space: normal;
             }
         }
     }
@@ -451,6 +480,10 @@ img {
         color: var(--violet);
         font-size: var(--x-small);
         border-radius: 50px;
+        &:hover{
+            background-color: var(--very-dark-blue);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        }
     }
     .footer {
         align-items: flex-start;
@@ -472,6 +505,7 @@ img {
             align-self: flex-start;
             order: 4;
             width: 15vw;
+
         };
         & .footer-logo{
             order: 1;
@@ -481,6 +515,11 @@ img {
             align-self: flex-end;
             
         };
+        .social-icon img:hover{
+            transform: scale(1.7);
+            transition: 1s;
+        }
     }
 
 }
+
